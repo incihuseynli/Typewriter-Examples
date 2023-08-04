@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typewriter Example 1 | With Javascript</title>
+    <!-- Internal Css Codes -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        text-align: center;
+      }
+      h1 {
+        margin-top: -8rem;
+        margin-bottom: 2rem;
+        font-size: 4rem;
+        letter-spacing: 0.1rem;
+        font-weight: 800;
+        background-color: #f3ec78;
+        background-image: linear-gradient(125deg, #bb1313, #f79f1f);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+      }
+      span {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #272727;
+      }
+      button {
+        border: none;
+        outline: none;
+        background: indigo;
+        color: white;
+        border-radius: 0.5rem;
+        padding: 0.8rem 3rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+        margin-bottom: 2rem;
+      }
+      p {
+        font-size: 1.2rem;
+        font-style: italic;
+        line-height: 1.5;
+        width: 400px;
+        padding-inline: 2rem;
+        font-weight: 800;
+        color: #bb1313;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Typewriter</h1>
+    <span
+      >When you click button text will written by itself
+      <strong>magicly</strong>!</span
+    >
+    <button onclick="typeText()">I'm a button!</button>
+    <p id="magical-text"></p>
+
+    
+    <!-- Javascript Codes -->
+    <script>
+      let i = 0;
+      let content = "This text is typing by itself!"; // what'll be write in p tag
+      let speed = 100; // with ms
+      function typeText() {
+        if (i < content.length) {
+          document.getElementById("magical-text").innerHTML +=
+            content.charAt(i);
+          i++;
+          setTimeout(typeText, speed);
+        }
+      }
+    </script>
+  </body>
+</html>

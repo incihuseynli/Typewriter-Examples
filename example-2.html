@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typewriter Example 2 | With Pure HTML & CSS</title>
+    <!-- Internal Css Codes -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .container {
+        display: inline-block;
+      }
+      p {
+        width: 100%;
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+        border-right: 0.25rem solid;
+        color: brown;
+        white-space: nowrap;
+        overflow: hidden;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+      .container1 {
+        width: 38%;
+      }
+      .container1 {
+        width: 36%;
+      }
+      .text1 {
+        animation: typing 5s steps(37) infinite,
+          cursor 0.4s step-end infinite alternate;
+      }
+      .text2 {
+        animation: typing 4s steps(32), cursor 0.4s step-end infinite alternate;
+      }
+      @keyframes cursor {
+        50% {
+          border-color: transparent;
+        }
+      }
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container1">
+      <p class="text1">This text will write itself infinitly</p>
+    </div>
+    <div class="container2">
+      <p class="text2">This text will write itself once</p>
+    </div>
+  </body>
+</html>
